@@ -7,6 +7,6 @@ namespace NetCore.Application.Interfaces
 {
     interface ICourseService
     {
-        IEnumerable<CourseViewModel> GetCourses();
+        CourseViewModel GetCourses();
     }
 }
