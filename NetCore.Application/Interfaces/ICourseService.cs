@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NetCore.Application.Interfaces
 {
-    interface ICourseService
+    public interface ICourseService
     {
         CourseViewModel GetCourses();
     }

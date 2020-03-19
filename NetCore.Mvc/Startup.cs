@@ -14,6 +14,7 @@ using NetCore.Mvc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NetCore.Data.Context;
+using NetCore.Ioc;
 
 namespace NetCore.Mvc
 {
@@ -49,6 +50,9 @@ namespace NetCore.Mvc
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //Call to register out services
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +82,10 @@ namespace NetCore.Mvc
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        public static void RegisterServices(IServiceCollection services) {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }
