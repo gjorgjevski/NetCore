@@ -8,5 +8,7 @@ namespace NetCore.Application.Interfaces
     public interface ICourseService
     {
         CourseViewModel GetCourses();
+        void Create(CourseViewModel course);
+
     }
 }
