@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NetCore.Application\NetCore.Application.csproj" />
     <ProjectReference Include="..\NetCore.Data\NetCore.Data.csproj" />
+    <ProjectReference Include="..\NetCore.Ibus\NetCore.Ibus.csproj" />
   </ItemGroup>
 
 </Project>
